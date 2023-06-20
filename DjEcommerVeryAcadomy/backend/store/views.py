@@ -3,7 +3,7 @@ from .models import Product, Category
 
 
 def products_all(request):
-    products = Product.objects.all()
+    products = Product.objects.all()[:3]
     # products = Product.objects.all()
     return render(request, 'store/home.html', {'products': products})
 
